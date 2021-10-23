@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: >
   resume_back-end
@@ -16,21 +16,21 @@ Parameters:
   TABLENAME:
     Type: String
     Description: The DynamoDB table
-    Default: 'counter-table'
+    Default: "counter-table"
 
   REGIONNAME:
     Type: String
     Description: Default region for deployment.
-    Default: 'us-east-2'
+    Default: "us-east-2"
 
   AWSENVNAME:
     Type: String
     Description: AWS Environment where code is being executed (AWS_SAM_LOCAL or AWS).
-    Default: 'AWS_SAM_LOCAL'
+    Default: "AWS_SAM_LOCAL"
 
 Resources:
   VisitorCounterFunction:
-    Type: AWS::Serverless::Function 
+    Type: AWS::Serverless::Function
     Properties:
       CodeUri: visitor-counter/
       Handler: app.lambda_handler
