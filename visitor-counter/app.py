@@ -39,9 +39,14 @@ def lambda_handler(event, context):
     counter = table.get_item(Key={'Id':1})['Item']['visitors']
 
     # Return the counter number to the API call
-    return {
+
+    response = {
         "statusCode": 200,
         "body": json.dumps({
             "counter": str(counter)
         }),
     }
+
+    response['headers'] = {"Access-Control-Allow-Origin": "https://resume.hollowresearch.com"}
+
+    return response
