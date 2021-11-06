@@ -10,7 +10,7 @@ Globals:
     Cors:
       AllowMethods: "'GET,OPTIONS'"
       AllowHeaders: "'content-type'"
-      AllowOrigin: "'https://resume.hollowresearch.com'"
+      AllowOrigin: "'https://phill.holbrook.cc'"
 
 Parameters:
   TABLENAME:

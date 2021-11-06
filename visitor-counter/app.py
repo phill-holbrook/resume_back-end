@@ -47,7 +47,7 @@ def lambda_handler(event, context):
     }
 
     response["headers"] = {
-        "Access-Control-Allow-Origin": "https://resume.hollowresearch.com"
+        "Access-Control-Allow-Origin": "https://phill.holbrook.cc"
     }
 
     return response
